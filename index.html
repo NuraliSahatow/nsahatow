@@ -1,312 +1,374 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Nurali Sahatow - Full-Stack Developer, freelance automation developer, and creator of LonelyStars.">
     <title>Nurali Sahatow</title>
-    <!-- latest -->
+
     <link rel="icon" type="image/png" href="https://i.imgur.com/AKAthFs.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+
     <style>
         body {
             padding-bottom: 50px;
             background-color: rgb(255, 255, 255);
         }
+
         .nes-progress {
             height: 25px;
         }
+
+        .section-space {
+            margin-top: 40px;
+        }
+
+        .section-space-large {
+            margin-top: 50px;
+        }
+
+        .experience-item {
+            margin-top: 30px;
+        }
+
+        .pixel-avatar {
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .small-note {
+            font-size: 80%;
+            line-height: 1.8;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation bar -->
-    <nav style='padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 60px; background-color: white;'>
+    <nav style="padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 60px; background-color: white;">
         <div class="container">
-            <h2 style='margin-bottom: 0;'>
-                <i class="snes-jp-logo"></i> Nurali Sahatow 
+            <h2 style="margin-bottom: 0;">
+                <i class="snes-jp-logo"></i> Nurali Sahatow
             </h2>
-
         </div>
     </nav>
 
-    <!-- Welcome "banner"/NES Balloon -->
-    
-    <div class="container" style='margin-bottom: 50px;'>
+    <!-- Welcome banner -->
+    <div class="container" style="margin-bottom: 50px;">
         <div class="row bottom-md bottom-xs">
             <div class="col last-xs first-md">
                 <i class="nes-bcrikko"></i>
             </div>
             <div class="col-sm-9 col-xs-12">
                 <div class="nes-balloon from-left">
-                    
-                    <p>Hello!</p>I'm Nurali. Full-Stack Developer with over 3 years of experience in developing scalable and user-friendly web applications. Currently pursuing a degree in Computer Science at Istanbul Medipol University. </p>
-                    
+                    <p>
+                        Hello! I'm Nurali, a Full-Stack Developer with 3+ years of experience building scalable,
+                        user-friendly web applications and automation systems. Over the last 2 years, I have also
+                        worked as a freelance developer, creating Telegram bots, AI bots, task automation tools,
+                        parsers of various complexity, and personal projects. Currently pursuing a degree in
+                        Computer Science at Istanbul Medipol University.
+                    </p>
                 </div>
-                
             </div>
         </div>
     </div>
 
-    <!-- Main body content; 2 columns -->
+    <!-- Main body content -->
     <div class="container">
         <div class="row">
-            <!-- Main left column -->
+            <!-- Left column -->
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <section class="nes-container with-title">
                     <h3 class="title">About Me</h3>
-                    <div>
-                        <div class="lists">
-                            <ul class="nes-list is-circle" style='margin-bottom: 0;'>
-                                <li>Middle Full-Stack Developer</li><br>
-                                <li>Computer Science Student at Istanbul Medipol University</li><br>
-                           </ul>
+                    <div class="lists">
+                        <ul class="nes-list is-circle" style="margin-bottom: 0;">
+                            <li>Middle Full-Stack Developer</li><br>
+                            <li>Freelance Full-Stack & Automation Developer</li><br>
+                            <li>Computer Science Student at Istanbul Medipol University</li><br>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="nes-container with-title section-space" style="background-color: white;">
+                    <h3 class="title">Languages</h3>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12" style="padding: 3px;">Turkmen</div>
+                        <div class="col-sm-8 col-xs-12">
+                            100%<progress class="nes-progress is-pattern" value="100" max="100"></progress>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12" style="padding: 3px;">Russian</div>
+                        <div class="col-sm-8 col-xs-12">
+                            90%<progress class="nes-progress is-pattern" value="90" max="100"></progress>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12" style="padding: 3px;">Turkish</div>
+                        <div class="col-sm-8 col-xs-12">
+                            65%<progress class="nes-progress is-pattern" value="65" max="100"></progress>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12" style="padding: 3px;">English</div>
+                        <div class="col-sm-8 col-xs-12">
+                            65%<progress class="nes-progress is-pattern" value="65" max="100"></progress>
                         </div>
                     </div>
                 </section>
 
-               
-                <section class="nes-container with-title" style='margin-top: 40px; 50px; background-color: white;'>
-                    <h3 class="title">Languages</h3>
-                    <div>
-                    <div>
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12" style='padding: 3px'>TURKMEN</div>
-                            <div class="col-sm-8 col-xs-12">
-                                100%<progress class="nes-progress is-pattern" value="100" max="100"></progress>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12" style='padding: 3px'>Russian</div>
-                            <div class="col-sm-8 col-xs-12">
-                                90%<progress class="nes-progress is-pattern" value="90" max="100"></progress>
-                            </div>
-                        </div>
-                        <div class="row">
-                                <div class="col-sm-4 col-xs-12" style='padding: 3px'>Turkish</div>
-                                <div class="col-sm-8 col-xs-12">
-                                    65%<progress class="nes-progress is-pattern" value="65" max="100"></progress>
-                                </div>
-                        </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12" style='padding: 3px'>ENGLISH</div>
-                                    <div class="col-sm-8 col-xs-12">
-                                        65%<progress class="nes-progress is-pattern" value="65" max="100"></progress>
-                                    </div>
-                                </div>
-                        
-                    </div>
-                    <div>
-                    </div>
-                </div>
-    
-                </section>
-                 <section class="nes-container with-title" style='margin-top: 50px; margin-bottom: 50px;'>
+                <section class="nes-container with-title section-space-large" style="margin-bottom: 50px;">
                     <h3 class="title">Socials</h3>
                     <div>
-                        <a href="https://t.me/pandistt" target="_blank">
+                        <a href="https://t.me/pandistt" target="_blank" rel="noopener noreferrer">
                             <i class="fa fa-telegram" style="font-size:38px"></i>
                         </a>
-                        <a href="https://github.com/NuraliSahatow" target="_blank">
+                        <a href="https://github.com/NuraliSahatow" target="_blank" rel="noopener noreferrer">
                             <i class="nes-icon github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/nurali-sahatov-635926263/" target="_blank">
+                        <a href="https://www.linkedin.com/in/nurali-sahatov-635926263/" target="_blank" rel="noopener noreferrer">
                             <i class="nes-icon linkedin"></i>
                         </a>
                     </div>
                 </section>
             </div>
-            <!-- Main right column -->
-            <div class="col-md-8 col-sm-12 col-xs-12" >
-                <div class="nes-container with-title" style='background-color: white;'>
+
+            <!-- Right column -->
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <section class="nes-container with-title" style="background-color: white;">
                     <p class="title">Frontend Knowledge</p>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">HTML
-                        </div>      
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">CSS</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">JavaScript</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">ReactJS</div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">HTML</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">CSS</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">JavaScript</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">TypeScript</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">ReactJS</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Next.js</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Vue</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Tailwind CSS</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Three.js</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">React Three Fiber</div></div>
+                </section>
 
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Vue</div>
-                    </div>
-                </div>
-                <div class="nes-container with-title is-dark" style='margin-top: 40px;'>
+                <section class="nes-container with-title is-dark section-space">
                     <p class="title">Backend Knowledge</p>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Codeigniter</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Python</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Django</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Flask</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">Node.js</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">RestAPI</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">NextJS</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">FastAPI</div>
-                    </div>
-                </div>
-                    <!--Other column-->
-                    <div class="nes-container with-title is-dark" style='margin-top: 40px;'>
-                        <p class="title">SQL  Knowledge</p>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">MySQL</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">PostgresSql</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">SQLite</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">MariaDB</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">MSSQL</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">MongoDB</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4 col-xs-12">SQLAlchemy</div>
-                                </div>
-                            </div>
-                            <div class="nes-container with-title is-dark" style='margin-top: 40px;'>
-                                <p class="title">Other Knowledge</p>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Requests</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Selenium</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">BeatifulSoap</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Scrapy</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Telegram Bot API</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Tenserflow</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Pandas</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Grafana</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Prometheus</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Kubernetes</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xs-12">Redis</div>
-                                        </div>
-                                    </div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Python</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Django</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Flask</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">FastAPI</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Node.js</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">REST API</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">CodeIgniter</div></div>
+                </section>
 
-                <h3 class="topic-title" style='margin-top: 40px;'>
+                <section class="nes-container with-title is-dark section-space">
+                    <p class="title">Database Knowledge</p>
+                    <div class="row"><div class="col-sm-4 col-xs-12">MySQL</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">PostgreSQL</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">SQLite</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">MariaDB</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">MSSQL</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">MongoDB</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">SQLAlchemy</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Redis</div></div>
+                </section>
+
+                <section class="nes-container with-title is-dark section-space">
+                    <p class="title">Other Knowledge</p>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Requests</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Selenium</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Playwright</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">BeautifulSoup</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Scrapy</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Telegram Bot API</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">TensorFlow</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Pandas</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Docker</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Docker Compose</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Caddy</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Cloudflare Turnstile</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Grafana</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Prometheus</div></div>
+                    <div class="row"><div class="col-sm-4 col-xs-12">Kubernetes</div></div>
+                </section>
+
+                <h3 class="topic-title section-space">
                     <i class="nes-icon star"></i>Experience
                 </h3>
-                <section class="nes-container is-dark" style='margin-bottom: 40px;'>
+
+                <section class="nes-container is-dark" style="margin-bottom: 40px;">
                     <h3>Total Experience</h3>
-                    <p>3 years</p>
+                    <p>3+ years in full-stack development, including 2 years of freelance work.</p>
                 </section>
+
                 <section class="nes-container is-dark">
-                    <div class="row" style='margin-top: 30px;'>
+                    <div class="row experience-item">
                         <div class="col-xs-2">
-                            <img src="https://github.com/BcRikko.png?size=20" style='width: 100%; height: auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges; '>
+                            <img src="https://github.com/BcRikko.png?size=20" class="pixel-avatar" alt="Pixel avatar">
                         </div>
                         <div class="col-xs-10">
-                            <h3>Full Stack Developer at <a href="https://ledokol.it/">Ledokol IT</a> <b>August 2024 - December 2024:</b></h3>
-                            <p>Worked as an outsourcer doing various interesting projects ranging from simple chatbots to full-fledged websites from scratch.</p>
+                            <h3>Freelance Full-Stack & Automation Developer <b>January 2024 - January 2026:</b></h3>
+                            <p>
+                                Worked independently on freelance and personal projects, delivering end-to-end
+                                solutions across web development, automation, AI integrations, and data extraction tools.
+                            </p>
                             <ul>
                                 <li>
                                     <ul>
-                                        <li>In this work I used my knowledge of NodeJS and FastAPI, Django for the server side of different projects  </li>
-                                        <li>Utilized RESTful APIs for seamless communication between frontend and backend systems.</li>
-                                        <li>Implemented frontend interfaces with  ReactJS and VueJs</li>
-                                        <li>Collaborated with a team of developers to integrate various features and functionalities.</li>
-                                        <li>Ensured cross-browser compatibility and optimized performance for improved user experience.</li>
+                                        <li>Developed Telegram bots for business workflows, notifications, user interaction, and process automation.</li>
+                                        <li>Built AI bots and assistants using LLM-based integrations, chat workflows, prompt logic, and API connections.</li>
+                                        <li>Created task automation tools to reduce repetitive manual work and improve operational efficiency.</li>
+                                        <li>Built parsers and web scraping systems of various complexity using Python, Requests, BeautifulSoup, Selenium, Playwright, and Scrapy.</li>
+                                        <li>Designed and developed personal pet projects from concept to production deployment.</li>
+                                        <li>Worked across frontend, backend, database design, integrations, debugging, and server deployment.</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="row" style='margin-top: 30px;'>
+
+                    <div class="row experience-item">
                         <div class="col-xs-2">
-                            <img src="https://github.com/BcRikko.png?size=20" style='width: 100%; height: auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges; '>
+                            <img src="https://github.com/BcRikko.png?size=20" class="pixel-avatar" alt="Pixel avatar">
                         </div>
                         <div class="col-xs-10">
-                            <h3>Middle Full Stack Developer at <a href="https://megamailer.io/">MegaMailer</a> <b>March 2023 - August 2024:</b></h3>
-                            <p>Stack, that I use on project</p>
+                            <h3>Full Stack Developer at <a href="https://ledokol.it/" target="_blank" rel="noopener noreferrer">Ledokol IT</a> <b>August 2024 - December 2024:</b></h3>
+                            <p>Worked as an outsourcer on different projects, ranging from simple chatbots to full-fledged websites built from scratch.</p>
                             <ul>
                                 <li>
                                     <ul>
-                                        <li> Backend: Python [Django, Flask]  </li>
-                                        <li> Frontend: React, Vue.js, Bootstrap</li>
-                                        <li> Database: PostgreSQL, MySQL</li>
-                                        <li> DevOps: Docker</li>
+                                        <li>Used Node.js, FastAPI, and Django for server-side development across different projects.</li>
+                                        <li>Utilized RESTful APIs for seamless communication between frontend and backend systems.</li>
+                                        <li>Implemented frontend interfaces with ReactJS and Vue.js.</li>
+                                        <li>Collaborated with developers to integrate features and improve product functionality.</li>
+                                        <li>Improved cross-browser compatibility and optimized performance for a better user experience.</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                    </div>    
-                    <div class="row" style='margin-top: 30px;'>
+                    </div>
+
+                    <div class="row experience-item">
                         <div class="col-xs-2">
-                            <img src="https://github.com/BcRikko.png?size=20" style='width: 100%; height: auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges; '>
+                            <img src="https://github.com/BcRikko.png?size=20" class="pixel-avatar" alt="Pixel avatar">
                         </div>
                         <div class="col-xs-10">
-                            <h3>Full Stack Developer at <a href="https://belet.me/int">Belet Film</a> <b>September 2022 - December 2023:</b></h3>
-                            <p>Developed responsive and dynamic web applications utilizing a wide range of technologies.</p>
+                            <h3>Middle Full Stack Developer at <a href="https://megamailer.io/" target="_blank" rel="noopener noreferrer">MegaMailer</a> <b>March 2023 - August 2024:</b></h3>
+                            <p>Worked on full-stack product development, backend services, frontend interfaces, databases, and deployment workflows.</p>
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li>Backend: Python, Django, Flask.</li>
+                                        <li>Frontend: React, Vue.js, Bootstrap.</li>
+                                        <li>Database: PostgreSQL, MySQL.</li>
+                                        <li>DevOps: Docker.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row experience-item">
+                        <div class="col-xs-2">
+                            <img src="https://github.com/BcRikko.png?size=20" class="pixel-avatar" alt="Pixel avatar">
+                        </div>
+                        <div class="col-xs-10">
+                            <h3>Full Stack Developer at <a href="https://belet.me/int" target="_blank" rel="noopener noreferrer">Belet Film</a> <b>September 2022 - December 2023:</b></h3>
+                            <p>Developed responsive and dynamic web applications using a wide range of frontend and backend technologies.</p>
                             <ul>
                                 <li>
                                     <ul>
                                         <li>Designed and implemented database schemas using MySQL and PostgreSQL.</li>
-                                        <li>Developed server-side logic using  Node.js.</li>
-                                        <li>Utilized RESTful APIs for seamless communication between frontend and backend systems.</li>
-                                        <li>Implemented frontend interfaces with  ReactJS</li>
-                                        <li>Collaborated with a team of developers to integrate various features and functionalities.</li>
-                                        <li>Ensured cross-browser compatibility and optimized performance for improved user experience.</li>
+                                        <li>Developed server-side logic using Node.js.</li>
+                                        <li>Utilized RESTful APIs for frontend and backend communication.</li>
+                                        <li>Implemented frontend interfaces with ReactJS.</li>
+                                        <li>Collaborated with a team of developers to integrate features and product functionality.</li>
+                                        <li>Ensured cross-browser compatibility and optimized performance for a better user experience.</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                    </div>  
-                    
-                    
-                </div>
-    <div class="container" style='margin-top: 50px; font-size: 60%;'>
-        <div class="row">
-            <div class="col-xs-12" style='text-align: center; color: black;'>
-               Nurali Sahatow&copy;2024<br>
+                    </div>
+                </section>
 
+                <h3 class="topic-title section-space">
+                    <i class="nes-icon heart"></i>Projects
+                </h3>
+
+                <section class="nes-container is-dark" style="margin-bottom: 40px;">
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-xs-2">
+                            <img src="https://github.com/BcRikko.png?size=20" class="pixel-avatar" alt="Pixel avatar">
+                        </div>
+                        <div class="col-xs-10">
+                            <h3>LonelyStars — Personal Project</h3>
+                            <a class="project-link" href="https://lonelystars.space/" target="_blank" rel="noopener noreferrer">
+                                lonelystars.space
+                            </a>
+
+                            <p>
+                                Built a multilingual anonymous storytelling platform where users can share personal letters,
+                                read stories from others, and explore them as stars in an interactive cosmic interface.
+                            </p>
+
+                            <p>
+                                The project was created as a quiet emotional space for people who feel anxiety, sadness,
+                                anger, loneliness, or grief and need a place where they can anonymously speak, share what is
+                                inside, and read stories from people who went through something similar. Sometimes even one
+                                word can become a light in the dark.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li>Designed and developed the project end to end, including product concept, UI/UX, frontend architecture, backend APIs, database structure, moderation workflow, admin tools, localization, SEO, and production deployment.</li>
+                                        <li>Built an interactive 3D cosmic interface and globe-based browsing experience.</li>
+                                        <li>Developed anonymous letter submission, story reading, comments, and moderation flows.</li>
+                                        <li>Created an admin panel for manual review, publishing, rejection, and moderation export.</li>
+                                        <li>Added multilingual support across 30 languages.</li>
+                                        <li>Set up SEO, legal pages, analytics events, accessibility improvements, performance fixes, and Docker-based deployment.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p>
+                                <b>Tech stack:</b> Next.js 16, React 19, TypeScript, Tailwind CSS, Framer Motion,
+                                Three.js, React Three Fiber, PostgreSQL, Redis, Docker Compose, Caddy,
+                                Cloudflare Turnstile, and Python for moderation-related tooling.
+                            </p>
+
+                            <p class="small-note">
+                                Community: @lonelystars_channel · @lonelystars_chat · @lonelystars_support
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
-   </body>
+
+    <div class="container" style="margin-top: 50px; font-size: 60%;">
+        <div class="row">
+            <div class="col-xs-12" style="text-align: center; color: black;">
+                Nurali Sahatow &copy; 2026<br>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
